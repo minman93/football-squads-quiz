@@ -1,4 +1,3 @@
-from beeprint import pp
 
 class Player(object):
     def __init__(self, squad_number, name, age, nation, position,previous_club,):
@@ -12,9 +11,10 @@ class Player(object):
 
 steven_gerrard = Player(8, "Steven Gerrard", 24, "England", "CM", "Liverpool")
 
-print (steven_gerrard)
+
 
 squad = {
-    8: steven_gerrard,
+    "8": steven_gerrard,
 }
-print (squad[8])
+
+

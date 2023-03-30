@@ -3,6 +3,7 @@ import psycopg2
 from dotenv import load_dotenv
 from flask import Flask
 
+
 CREATE_SQUAD_TABLE = (
     "CREATE TABLE IF NOT EXISTS liverpool0304 (id SERIAL PRIMARY KEY, squad_number INT, name VARCHAR(100), age INT, nation VARCHAR(100), previous_club VARCHAR(100));"
 )
@@ -21,6 +22,6 @@ connection = psycopg2.connect(url)
 def home():
     return "Hello, world!"
 
-@app.get("/squad")
+@app.get("/squads/:clubseason")
 def squad():
     return "Squad goes here"
